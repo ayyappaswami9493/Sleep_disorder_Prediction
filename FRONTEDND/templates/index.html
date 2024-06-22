@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sleep Disorder Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center align text */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px); /* Adjusted for padding */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: calc(100% - 20px); /* Adjusted for padding */
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1> Sleep Disorder Prediction</h1>
+    <form action="/predict" method="post">
+                
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender"><br>
+
+        <label for="sleep_duration">Sleep Duration:</label><br>
+        <input type="text" id="sleep_duration" name="sleep_duration"><br>
+        
+        <label for="quality_of_sleep">Quality of Sleep (1-10):</label><br>
+        <input type="text" id="quality_of_sleep" name="quality_of_sleep"><br>
+        
+        <label for="physical_activity_level">Physical Activity Level (1-10):</label><br>
+        <input type="text" id="physical_activity_level" name="physical_activity_level"><br>
+
+        <label for="daily_steps">Daily Steps:</label><br>
+        <input type="text" id="daily_steps" name="daily_steps"><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
